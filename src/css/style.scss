@@ -1,0 +1,241 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+#myCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 4%;
+}
+header {
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.divholder {
+    margin: 0em 0.5em 0.5em 0.5em;
+}
+
+.card {
+    height: 100%;
+}
+
+i {
+    font-size: 3em;
+    &:hover {
+        color: rgb(62, 59, 245);
+    }
+}
+
+a {
+    margin: auto;
+    color: inherit;
+    text-decoration: none;
+}
+
+.socialhoop1, .socialhoop2, .socialhoop3, .socialhoop4 {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4%;
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    right: 2em;
+}
+
+.card-text {
+    margin-top: 1em;
+    margin-bottom: 6em;
+}
+
+.card-title {
+    margin: auto;
+}
+
+#bottomsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.news {
+    margin: 0em 0.5em 3em 0.5em;
+}
+
+#emailinline {
+    display: flex;
+    flex-direction: column;
+    column-gap: 4%;
+    width: 15em; 
+    margin: auto;
+}
+
+#exampleInputEmail1 {
+    margin-bottom: 0.5em;
+}
+
+.bottomdisclaimer {
+    opacity: .5;
+    margin: 3em 0.5em 0.5em 0.5em;
+}
+
+.copyright {
+    margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.btn, .btn-primary {
+    font-weight: bold;
+    color: fff;
+    background-color: rgb(62, 59, 245);
+    &:hover {
+        background-color: rgb(210, 0, 218);
+    }
+}
+
+.bi-github {
+    &:hover {
+        color: gray;
+    }
+}
+
+.bi-instagram {
+    &:hover {
+        color: rgb(210, 0, 218);
+    }
+}
+
+@media (min-width: 768px) {
+  
+    #myCards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 3em;
+        grid-row-gap: 3em;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .divholder {
+        //margin: 0em 3em 3em 3em;
+        margin: auto; 
+        margin-top: 0%;
+        margin-bottom: 0%; 
+        border: solid 1px transparent;
+        border-image: linear-gradient(to right, rgb(197, 196, 196) , grey);
+        border-image-slice: 1;
+        &:hover {
+            border: solid 1px rgb(140, 157, 250);  
+            transition: .6s all;
+        }
+    }
+
+    .card {
+        border-radius: 1px;
+        min-width: 18em;
+        max-width: 18em;        
+    }
+
+    .card-img-top {
+        &:hover {
+            opacity: .5;
+            transition: .6s all;
+        }
+    }
+
+    .articletext {
+        margin: auto;
+        max-width: 80%;
+    }
+
+    #emailinline {
+        flex-direction: row;    
+    }
+
+    #exampleInputEmail1 {
+        width: 20em;
+    }
+
+    .btn-primary,#exampleInputEmail1 {
+        margin-bottom: auto;
+    }
+
+    .bottomdisclaimer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-left: 0%;
+        padding-right: 10%;
+        margin-top: 2em;
+    }
+
+    .copyright {
+        margin-top: 0em;
+    }
+
+    .disclaim {
+        width: 27em;
+    }
+
+    .news {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    a {
+        &:hover {
+            color: rgb(62, 59, 245);
+            transition: .4s all;
+        }
+    }
+
+    .card-text {
+        min-height: 6em;
+    }
+}
+
+@media (min-width: 1200px) { 
+
+    #myCards {
+        display: flex;
+        flex-direction: row;
+        border: solid 1px transparent; 
+        justify-content:space-evenly;
+        padding-left: 2%; 
+        padding-right: 2%; 
+        grid-column-gap: 0em;
+    }
+
+    .divholder { 
+        //margin: 0% 2% 2% 2%;
+        margin: auto;
+        margin-top: 0%;
+        margin-bottom: 0%; 
+    }
+
+    .card {
+        min-width: 18em;
+        max-width: 18em;
+    }
+
+    .news {
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 2em;
+    }
+
+    .bottomdisclaimer {
+        margin-top: 1em;
+    }
+
+    .copyright {
+        margin-top: 0em;
+    }
+
+    .disclaim {
+        width: 32em;
+    }
+}
